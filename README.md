@@ -1,3 +1,5 @@
+NAME:IRFAN KHAN.N
+RegisterNumber:212224230097
 # FULL_ADDER_SUBTRACTOR
 
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
@@ -37,40 +39,69 @@ Diff = A ⊕ B ⊕ Bin
 Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
-FULL ADDER:
-![Screenshot 2024-04-01 194127](https://github.com/PREM3112/FULL_ADDER_SUBTRACTOR/assets/145449383/b2f3f217-76b3-4f12-a7ba-54b5ff8b4838)
-FULL SUBRACTOR:
-![Screenshot 2024-04-01 194137](https://github.com/PREM3112/FULL_ADDER_SUBTRACTOR/assets/145449383/b0b7195c-e9a1-4ebf-a594-72a65835e8b2)
-
-
 
 **Procedure**
 
-STEP 1: Use module project name(input,output) to start the Verilog programmming. 
-STEP 2: Assign inputs and outputs using the word input and output respectively. 
-STEP 3: Use defined keywords like wire,assign and required logic gates to represent the boolean expression. 
-STEP 4: Use each output to represnt onre for differnce and the other for borrow. 
-STEP 5: End the verilog program using keyword endmodule.
+Write the detailed procedure here
 
 **Program:**
-DEVELOPED BY: PREM.R
-REGISTER NO: 212223240124
-![Screenshot 2024-04-01 194146](https://github.com/PREM3112/FULL_ADDER_SUBTRACTOR/assets/145449383/379aef4f-5d02-4e49-acd2-9bdbe7391808)
-![Screenshot 2024-04-01 194154](https://github.com/PREM3112/FULL_ADDER_SUBTRACTOR/assets/145449383/42baaa46-0fb3-43f8-9c61-7025ae54e0e0)
+
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
+
+*/
+
+**Full Adder**
+
+module Experiment4a(a,b,cin,sum,carry);
+
+input a,b,cin;
+
+output sum,carry;
+
+assign sum=( (a ^ b)^cin);
+
+assign carry= ( (a & b)| ( cin &(a ^ b )));
+
+endmodule
 
 
+**Full Subtractor**
 
+module Experiment4b(a,b,bin,difference,borrow);
+
+input a,b,bin;
+
+output difference,borrow;
+
+assign difference= ( (a ^ b)^bin);
+
+assign borrow= ( ( ~a & b)| ( bin & (~(a ^ b ))));
+
+endmodule
 
 
 **RTL Schematic**
-![Screenshot 2024-04-01 194203](https://github.com/PREM3112/FULL_ADDER_SUBTRACTOR/assets/145449383/c56fbbea-084b-4a25-a1af-893635e8e8cd)
-![Screenshot 2024-04-01 194211](https://github.com/PREM3112/FULL_ADDER_SUBTRACTOR/assets/145449383/6bc0e1a2-bc9c-46df-ab7f-0ffd68cd061d)
+
+**Full Adder**
+
+![Screenshot 2024-11-23 111023](https://github.com/user-attachments/assets/629d34d3-12d4-4949-8b58-580ad3f46a1b)
+
+**Full Subtractor**
+
+![Screenshot 2024-11-23 111559](https://github.com/user-attachments/assets/43a7748e-fc92-4e57-bbc1-fbd653a722a6)
 
 
 
 **Output Timing Waveform**
-![Screenshot 2024-04-01 194222](https://github.com/PREM3112/FULL_ADDER_SUBTRACTOR/assets/145449383/b6aa2dc0-3c90-48c6-a54e-43bf869a17ce)
-![Screenshot 2024-04-01 194230](https://github.com/PREM3112/FULL_ADDER_SUBTRACTOR/assets/145449383/44f71d89-0fc5-4dfc-915a-0363c0c87dda)
+
+**Full Adder**
+
+![Screenshot 2024-11-23 111231](https://github.com/user-attachments/assets/dfedd4e3-628f-416b-991a-344389261b7a)
+
+**Full Subtractor**
+
+![Screenshot 2024-11-23 111733](https://github.com/user-attachments/assets/74b42eea-3319-436a-a36c-55f8a06f1c5d)
+
 
 
 **Result:**
